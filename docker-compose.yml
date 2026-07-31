@@ -1,0 +1,44 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: copercana-backend
+    restart: always
+    environment:
+      - PORT=3001
+      - JWT_SECRET=copercana-secret-key-1234
+      # Exemplo de Variaveis para email
+      # - SMTP_HOST=smtp.gmail.com
+      # - SMTP_PORT=587
+      # - SMTP_USER=seu-email
+      # - SMTP_PASS=sua-senha
+    volumes:
+      # MAPEAMENTO CRUCIAL: Salva o banco de dados fora do container para não ser apagado
+      - copercana_db_data:/app
+    ports:
+      - "3001:3001"
+    networks:
+      - copercana-network
+
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: copercana-frontend
+    restart: always
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    networks:
+      - copercana-network
+
+volumes:
+  copercana_db_data:
+
+networks:
+  copercana-network:
+    driver: bridge
