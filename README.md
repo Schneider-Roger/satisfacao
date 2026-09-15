@@ -1,16 +1,146 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+# Plataforma de Satisfação & Ouvidoria
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Aplicação full stack para coleta de pesquisas de satisfação, gestão de manifestações de ouvidoria e acompanhamento administrativo.
 
-## React Compiler
+O projeto utiliza **React + Vite** no frontend e **Node.js + Express + SQLite** no backend, com suporte a **Docker, Docker Compose e Nginx**.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Funcionalidades
 
-## Expanding the ESLint configuration
+- Pesquisa de satisfação
+- Formulário de ouvidoria
+- Dashboard administrativo
+- Gestão de respostas
+- Gestão de manifestações
+- Histórico por cliente
+- Controle de status e tratativas
+- Gestão de usuários
+- Configurações do sistema
+- Gráficos e indicadores
+- Geração de relatórios em PDF
+- Processamento de planilhas
+- Integração para envio de e-mails
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Arquitetura
+
+```text
+React + Vite
+     |
+   REST API
+     |
+Node.js + Express
+     |
+   SQLite
+
+O repositório também possui estrutura para execução em containers:
+
+Nginx / Frontend
+       |
+       v
+    Backend
+       |
+       v
+Persistent SQLite data
+Frontend
+
+Principais tecnologias:
+
+React 19
+React Router
+Vite
+Recharts
+jsPDF
+jsPDF AutoTable
+html2canvas
+XLSX
+Lucide React
+
+A aplicação possui páginas públicas de Pesquisa de Satisfação e Ouvidoria, além de uma área administrativa com Dashboard, Respostas, Painel de Ouvidoria, Histórico de Clientes, Configurações e Usuários.
+
+Backend
+
+Principais tecnologias:
+
+Node.js
+Express 5
+SQLite
+JSON Web Token
+bcryptjs
+Nodemailer
+express-rate-limit
+dotenv
+CORS
+
+O backend centraliza autenticação, usuários, pesquisas, ouvidoria, configurações da aplicação e persistência dos dados.
+
+Docker
+
+Arquivos principais de infraestrutura:
+
+Dockerfile
+backend/Dockerfile
+docker-compose.yml
+nginx.conf
+
+Para iniciar a aplicação com Docker:
+
+docker compose up -d --build
+Desenvolvimento local
+Frontend
+npm install
+npm run dev
+Backend
+cd backend
+npm install
+node server.js
+Estrutura do projeto
+.
+├── backend/
+│   ├── Dockerfile
+│   ├── server.js
+│   └── package.json
+├── public/
+├── src/
+│   ├── assets/
+│   ├── contexts/
+│   ├── layouts/
+│   └── pages/
+│       └── admin/
+├── Dockerfile
+├── docker-compose.yml
+├── nginx.conf
+└── package.json
+Valor técnico do projeto
+
+Este projeto demonstra experiência prática com:
+
+Desenvolvimento full stack
+React
+Node.js e Express
+APIs REST
+SQLite
+Dashboards e visualização de dados
+Geração de relatórios
+Integração de e-mail
+Docker e Docker Compose
+Nginx
+Fluxos administrativos e de atendimento
+Status
+
+Projeto ativo e em evolução.
+
+Autor
+
+Roger Schneider
+Software Developer | AI Solutions
+
+LinkedIn · GitHub Profile
+
+
+Depois salve com a mensagem de commit:
+
+```text
+docs: replace default Vite README with professional project documentation
+
+Esse README substitui completamente o texto padrão do Vite e apresenta o projeto como uma aplicação full stack real, que é muito melhor para recrutador.
