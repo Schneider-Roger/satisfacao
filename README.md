@@ -1,5 +1,3 @@
-
-
 # Plataforma de Satisfação & Ouvidoria
 
 Aplicação full stack para coleta de pesquisas de satisfação, gestão de manifestações de ouvidoria e acompanhamento administrativo.
@@ -24,7 +22,7 @@ O projeto utiliza **React + Vite** no frontend e **Node.js + Express + SQLite** 
 
 ## Arquitetura
 
-```text
+text
 React + Vite
      |
    REST API
@@ -32,9 +30,7 @@ React + Vite
 Node.js + Express
      |
    SQLite
-
 O repositório também possui estrutura para execução em containers:
-
 Nginx / Frontend
        |
        v
@@ -42,6 +38,7 @@ Nginx / Frontend
        |
        v
 Persistent SQLite data
+
 Frontend
 
 Principais tecnologias:
@@ -137,5 +134,12 @@ Software Developer | AI Solutions
 
 LinkedIn · GitHub Profile
 
+
+Depois salve com a mensagem de commit:
+
+```text
+docs: replace default Vite README with professional project documentation
+
+     
 
 
