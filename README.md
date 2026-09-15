@@ -138,9 +138,4 @@ Software Developer | AI Solutions
 LinkedIn · GitHub Profile
 
 
-Depois salve com a mensagem de commit:
 
-```text
-docs: replace default Vite README with professional project documentation
-
-Esse README substitui completamente o texto padrão do Vite e apresenta o projeto como uma aplicação full stack real, que é muito melhor para recrutador.
